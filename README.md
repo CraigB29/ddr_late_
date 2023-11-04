@@ -9,8 +9,8 @@ Duck2_THREAD - delays between 2-3 seconds, then prints the second duck
 Goose_THREAD -delays between 3-4 seconds, then prints goose
 Main_THREAD -Controls order of execution of threads
 
-Main registers callbacks with all 3 print threads, then controls execution order. First signally to trigger delay, then signalling to trigger print, then waits for the callback proceeding with next word delay then print. Main inserts commas and
-newlines to eas reading.
+Main registers callbacks with all 3 print threads, then controls execution order. First signally to trigger start time for all threads (concurrent), then signalling to trigger print for duck, then waits for the callback from proceeding with next word delay then print. Main inserts commas and
+newlines to ease reading.
 
 Assumption:
 Assumed (on this submission) that delays were peformed AFTER previous word print (e.g. after goose prints start 1-2 second delay and wait before printing first duck)
